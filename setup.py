@@ -27,7 +27,7 @@ setup(
     packages=['py_automl'],
     include_package_data=True,
     python_requires=">=3.7.*",
-    install_requires=['pandas', 'requests'],
+    install_requires=['pandas', 'requests','python-dotenv'],
     license=about['__license__'],
     zip_safe=False,
     classifiers=[
