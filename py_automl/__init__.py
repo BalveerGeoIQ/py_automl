@@ -10,13 +10,13 @@ import os
 import pandas as pd
 import requests
 import datetime
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import matplotlib.pyplot as plt
-from tqdm.notebook import tqdm
+#from tqdm.notebook import tqdm
 import time
 import ast
 import json
-load_dotenv()
+#load_dotenv()
 
 
 # self.headers = {
