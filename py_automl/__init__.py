@@ -533,7 +533,7 @@ class automl:
         """
         url = "https://app.staging.geoiq.io/automlwrapper/stg/progress/v1.0/getmodelprogress"
         payload = json.dumps({
-          "dataset_id": model_id
+          "model_id": model_id
         })
 
         response = requests.request("POST", url, headers=self.headers, data=payload)
