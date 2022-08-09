@@ -10,13 +10,13 @@ import os
 import pandas as pd
 import requests
 import datetime
-#from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import matplotlib.pyplot as plt
-#from tqdm.notebook import tqdm
+# from tqdm.notebook import tqdm
 import time
 import ast
 import json
-#load_dotenv()
+# load_dotenv()
 
 
 # self.headers = {
@@ -318,7 +318,7 @@ class automl:
        'desc_name', 'description', 'deviation', 'direction', 'id', 'ks',
        'major_category', 'max_ks', 'mean', 'name', 'normalization_level',
        'normalization_level_id', 'roc', 'sd', 'sub_category_name', 'unique',
-       'unique_count', 'variable', 'vhm_hierarchy_id']].sort_values('iv').reset_index(drop=True)
+       'unique_count', 'variable', 'vhm_hierarchy_id']].sort_values('iv',ascending=False).reset_index(drop=True)
 
 #### Datasetinfo
 
@@ -544,30 +544,30 @@ class automl:
 #### Model Progress
 
 
-    def model_progress(self,model_id):
-        """
+#     def model_progress(self,model_id):
+#         """
 
-        Parameters
-        ----------
-        model_id : An unique identifier for the model
+#         Parameters
+#         ----------
+#         model_id : An unique identifier for the model
             
 
-        Returns
-        -------
+#         Returns
+#         -------
         
 
-        """
+#         """
 
-        url = "https://app.staging.geoiq.io/automlwrapper/stg/progress/v1.0/getmodelprogress"
+#         url = "https://app.staging.geoiq.io/automlwrapper/stg/progress/v1.0/getmodelprogress"
 
-        payload = json.dumps({
-          "model_id": model_id
-        })
+#         payload = json.dumps({
+#           "model_id": model_id
+#         })
         
     
-        response = requests.request("POST", url, headers=self.headers, data=payload)
+#         response = requests.request("POST", url, headers=self.headers, data=payload)
 
-        return response.json()['data']['progress'][0]
+#         return response.json()['data']['progress'][0]
 
 #### Model Details
 
